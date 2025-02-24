@@ -83,7 +83,7 @@ SET total_amount = COALESCE(total_amount, 0);
 
 ## Business Problems Solved
 
-### 1. Write a query to find the top 5 most frequently ordered dishes by customer called "Arjun Mehta" in the last 1 year.
+### 1. Write a query to find the top 5 most frequently ordered dishes by customer called "Ranju Mehta" in the last 1 year.
 
 ```sql
 SELECT 
@@ -104,7 +104,7 @@ FROM -- table name
 	WHERE 
 		o.order_date >= CURRENT_DATE - INTERVAL '1 Year'
 		AND 
-		c.customer_name = 'Arjun Mehta'
+		c.customer_name = 'Ranju Mehta'
 	GROUP BY 1, 2, 3
 	ORDER BY 1, 4 DESC) as t1
 WHERE rank <= 5
